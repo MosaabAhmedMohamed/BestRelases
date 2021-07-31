@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "679180349758",
+    "project_id": "best-releases",
+    "storage_bucket": "best-releases.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679180349758:android:0fbf565982ae07fbbc7c6f",
+        "android_client_info": {
+          "package_name": "com.movie.bestrelases"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679180349758-786ip7mnq3ndquhdvesmj7ake6l81n7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.movie.bestrelases",
+            "certificate_hash": "4eb2cd6e464ed14ca1aad3200f929f51c0dcfda1"
+          }
+        },
+        {
+          "client_id": "679180349758-m2spugnop59gko7k0moapeliughq5sc3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyeDIRGarFcLftPuaih4TBgiT1Leo-6gI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679180349758-m2spugnop59gko7k0moapeliughq5sc3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
