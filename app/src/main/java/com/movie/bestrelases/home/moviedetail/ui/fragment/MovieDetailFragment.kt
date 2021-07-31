@@ -16,11 +16,12 @@ import com.movie.bestrelases.base.ui.ext.showRetryDialog
 import com.movie.bestrelases.base.ui.ext.visible
 import com.movie.bestrelases.databinding.FragmentMovieDetailBinding
 import com.movie.bestrelases.di.ViewModelFactory
-import com.movie.bestrelases.home.moviedetail.data.remote.model.MovieDetailModel
 import com.movie.bestrelases.home.moviedetail.presentation.viewmodel.MovieDetailViewModel
 import com.movie.bestrelases.home.moviedetail.presentation.viewstate.MovieDetailViewState
-import com.movie.bestrelases.util.data.APIConst.Companion.ID_KEY
+import com.movie.bestrelases.home.movies.presentation.uimodels.MovieUIModel
 import com.movie.bestrelases.util.data.APIConst.Companion.POSTER_BASE_URL
+import com.movie.bestrelases.util.ui.NavigationConst.Companion.ID_KEY
+import com.movie.bestrelases.util.ui.NavigationConst.Companion.MODEL_KEY
 import javax.inject.Inject
 
 class MovieDetailFragment() : BaseFragment() {
@@ -50,9 +51,15 @@ class MovieDetailFragment() : BaseFragment() {
     }
 
     private fun checkArgs() {
-        if (arguments != null && requireArguments().containsKey(ID_KEY)) {
-            movieDetailViewModel.movieId = requireArguments().getInt(ID_KEY)
-            getMovie(requireArguments().getInt(ID_KEY))
+        if (arguments != null) {
+            if (requireArguments().containsKey(ID_KEY)) {
+                movieDetailViewModel.movieId = requireArguments().getInt(ID_KEY)
+                getMovie(requireArguments().getInt(ID_KEY))
+            } else if (requireArguments().containsKey(MODEL_KEY)) {
+                movieDetailViewModel.movieUIModel =
+                    requireArguments().getParcelable(MODEL_KEY)
+                setData()
+            }
         }
     }
 
@@ -78,7 +85,7 @@ class MovieDetailFragment() : BaseFragment() {
         }
     }
 
-    private fun successState(result: MovieDetailModel) {
+    private fun successState(result: MovieUIModel) {
         binding.rootView.visible()
         showLoading(false)
         setData(result)
@@ -97,17 +104,19 @@ class MovieDetailFragment() : BaseFragment() {
     }
 
 
-    private fun setData(model: MovieDetailModel) {
-        binding.movieTitle.text = model.title
-        binding.movieReleaseDate.text = model.release_date
-        binding.movieRating.text = model.vote_average.toString()
-        binding.movieOverview.text = model.overview
-        binding.ivMoviePoster.load(POSTER_BASE_URL.plus(model.poster_path)) {
-            crossfade(true)
-                .error(R.drawable.ic_movie)
-                .placeholder(R.drawable.ic_movie)
-                .scale(Scale.FILL)
-            transformations(RoundedCornersTransformation())
+    private fun setData(model: MovieUIModel? = movieDetailViewModel.movieUIModel) {
+        model?.let {
+            binding.movieTitle.text = model.title
+            binding.movieReleaseDate.text = model.release_date
+            binding.movieRating.text = model.vote_average.toString()
+            binding.movieOverview.text = model.overview
+            binding.ivMoviePoster.load(POSTER_BASE_URL.plus(model.poster_path)) {
+                crossfade(true)
+                    .error(R.drawable.ic_movie)
+                    .placeholder(R.drawable.ic_movie)
+                    .scale(Scale.FILL)
+                transformations(RoundedCornersTransformation())
+            }
         }
     }
 }

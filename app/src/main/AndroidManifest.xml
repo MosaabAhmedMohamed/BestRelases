@@ -14,6 +14,9 @@
 
         android:theme="@style/Theme.BestRelases">
         <activity android:name="com.movie.bestrelases.home.movies.ui.activity.HomeActivity">
+        </activity>
+
+        <activity android:name=".splash.ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,9 +7,10 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import com.movie.bestrelases.R
 import com.movie.bestrelases.home.movies.data.remote.model.Results
+import com.movie.bestrelases.home.movies.presentation.uimodels.MovieUIModel
 
 class MoviesAdapter(
-    private val onItemClick: (Int) -> Unit,
+    private val onItemClick: (MovieUIModel) -> Unit,
     DIFF_CALLBACK: DiffUtil.ItemCallback<Results>
 ) : PagingDataAdapter<Results, MovieItemVH>(DIFF_CALLBACK) {
 

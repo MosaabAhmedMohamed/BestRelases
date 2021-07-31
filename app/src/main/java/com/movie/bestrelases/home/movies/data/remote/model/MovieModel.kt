@@ -20,7 +20,7 @@ data class Results(
     val original_title: String,
     var genre_ids: List<Int>,
     val title: String,
-    var vote_average: Float,
+    var vote_average: Double,
     val overview: String,
     val release_date: String
 )

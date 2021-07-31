@@ -16,7 +16,6 @@ class MoviesViewModel @Inject constructor(private val moviesUseCase: MoviesUseCa
 
     fun moviesList(): LiveData<PagingData<Results>> {
         if (movies == null) movies = moviesUseCase.getMoviesPager()
-
         return movies!!.liveData
     }
 

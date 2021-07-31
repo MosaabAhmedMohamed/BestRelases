@@ -7,7 +7,7 @@ class APIConst {
         const val API_KEY = "6e63c2317fbe963d76c3bdc2b785f6d1"
         const val UNAUTHORIZED = 401
         const val CONNECTION_TIMEOUT = 10 // 10 seconds
-        const val ID_KEY = "ID_KEY"
+
 
 
     }
