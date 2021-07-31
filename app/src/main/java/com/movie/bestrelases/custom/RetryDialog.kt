@@ -37,8 +37,6 @@ class RetryDialog : BaseDialog() {
         requireActivity().finish()
     }
 
-    override fun init() {
-    }
 
     companion object {
         fun newInstance(onRetry: () -> Unit): RetryDialog {

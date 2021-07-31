@@ -24,9 +24,9 @@ abstract class BaseDialog : DialogFragment() {
         onViewClicked()
     }
 
-    protected abstract fun onViewClicked()
+    protected open fun onViewClicked(){}
 
-    protected abstract fun init()
+    protected open fun init(){}
 
     protected open fun allowForcing() {
         if (dialog != null && dialog!!.window != null && isAdded) {
