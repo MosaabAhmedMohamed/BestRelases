@@ -1,13 +1,14 @@
 package com.movie.bestrelases.util
 
-/*import android.os.Bundle
+import android.os.Bundle
+import com.google.firebase.FirebaseApp
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.ktx.Firebase*/
+import com.google.firebase.ktx.Firebase
 
 object FirebaseAnalyticsUtil {
 
-  /*  private var firebaseAnalytics = Firebase.analytics
+    private var firebaseAnalytics = Firebase.analytics
 
     fun logMovieDetailEvent(id: Int, name: String) {
         val prams = Bundle().apply {
@@ -15,9 +16,6 @@ object FirebaseAnalyticsUtil {
             putString(FirebaseAnalytics.Param.ITEM_NAME, name)
         }
         firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, prams)
-    }*/
-
-    fun logMovieDetailEvent(id: Int, name: String) {
-
     }
+
 }

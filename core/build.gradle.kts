@@ -64,6 +64,7 @@ dependencies {
     implementation(PAGING.PAGING_RX)
 
     // OkHttp, Retrofit
+    implementation("com.squareup.okhttp3:okhttp:3.14.7")
     implementation(RETROFIT.RETROFIT)
     implementation(LOGGING_INTERCEPTORS.LOGGING_INTERCEPTORS)
     implementation(RETROFIT.RETROFIT_MOSHI_CONVERTER)

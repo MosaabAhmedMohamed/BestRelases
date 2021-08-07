@@ -1,6 +1,7 @@
 package com.movie.bestrelases.app
 
 import android.app.Application
+import com.google.firebase.FirebaseApp
 import com.movie.bestrelases.di.AppComponent
 import com.movie.bestrelases.di.DaggerAppComponent
 import dagger.android.AndroidInjector
@@ -23,7 +24,6 @@ class BestReleasesApplication : Application(),HasAndroidInjector  {
     override fun onCreate() {
         super.onCreate()
         initDaggerAppComponent()
-
     }
 
     private fun initDaggerAppComponent() {

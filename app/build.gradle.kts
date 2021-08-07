@@ -41,7 +41,7 @@ android {
         isAbortOnError = true
     }
 
-    viewBinding { isEnabled = true }
+    android.buildFeatures.viewBinding = true
 }
 
 dependencies {
@@ -74,10 +74,6 @@ dependencies {
 
     // OkHttp, Retrofit
     implementation(RETROFIT.RETROFIT)
-    implementation(LOGGING_INTERCEPTORS.LOGGING_INTERCEPTORS)
-    implementation(RETROFIT.RETROFIT_MOSHI_CONVERTER)
-    implementation(RX.RETROFIT)
-
 
     //RX
     implementation(RX.RXANDROID)
@@ -100,7 +96,7 @@ dependencies {
     implementation(COIL.COIL)
 
 
-  /*  //Firebase
-    implementation(Firebase.firebase_BOM)
-    implementation(Firebase.firebase_ANALYTICS)*/
+    //Firebase
+    implementation(platform(Firebase.firebase_BOM))
+    implementation(Firebase.firebase_ANALYTICS)
 }

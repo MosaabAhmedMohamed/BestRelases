@@ -6,9 +6,9 @@ plugins {
     id("io.gitlab.arturbosch.detekt") version BuildPluginsVersion.DETEKT
     id("org.jlleitschuh.gradle.ktlint") version BuildPluginsVersion.KTLINT
     id("com.github.ben-manes.versions") version BuildPluginsVersion.VERSIONS_PLUGIN
-   /* id ("com.google.gms:google-services") version BuildPluginsVersion.GOOGLE_SERVICES*/
-
+  /*  id ("com.google.gms:google-services") version cccc*/
 }
+
 
 allprojects {
     group = PUBLISHING_GROUP
@@ -16,6 +16,7 @@ allprojects {
         google()
         mavenCentral()
     }
+
 }
 
 subprojects {
@@ -55,6 +56,8 @@ tasks.register("clean", Delete::class.java) {
 buildscript {
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
+        classpath("com.google.gms:google-services:${BuildPluginsVersion.GOOGLE_SERVICES}")
+
     }
 }
 
@@ -64,4 +67,4 @@ tasks.withType<DependencyUpdatesTask> {
     }
 }
 
-fun isNonStable(version: String) = "^[0-9,.v-]+(-r)?$"?.toRegex()?.matches(version).not()
+fun isNonStable(version: String) = "^[0-9,.v-]+(-r)?$".toRegex().matches(version).not()

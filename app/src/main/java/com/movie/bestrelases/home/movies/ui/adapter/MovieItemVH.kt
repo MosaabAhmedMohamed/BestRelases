@@ -32,7 +32,7 @@ class MovieItemVH(
             binding.cvMovieReleaseDate.text = item.release_date
             binding.cvMovieTitle.text = item.title
             binding.cardView.setOnClickListener {
-                FirebaseAnalyticsUtil.logMovieDetailEvent(item.id, item.original_title)
+               /* FirebaseAnalyticsUtil.logMovieDetailEvent(item.id, item.original_title)*/
                 itemClick(item.mapToUIModel())
             }
         } catch (e: NullPointerException) {
