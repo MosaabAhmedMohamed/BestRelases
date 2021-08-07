@@ -5,9 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
+import com.example.core.movies.data.remote.model.Results
+import com.example.core.movies.presentation.uimodels.MovieUIModel
 import com.movie.bestrelases.R
-import com.movie.bestrelases.home.movies.data.remote.model.Results
-import com.movie.bestrelases.home.movies.presentation.uimodels.MovieUIModel
 
 class MoviesAdapter(
     private val onItemClick: (MovieUIModel) -> Unit,

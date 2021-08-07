@@ -1,9 +1,9 @@
 package com.movie.bestrelases.di
 
+import com.example.core.moviedetail.di.MovieDetailModule
+import com.example.core.movies.di.MoviesModule
 import com.movie.bestrelases.home.moviedetail.di.MovieDetailFragmentBuilder
-import com.movie.bestrelases.home.moviedetail.di.MovieDetailModule
 import com.movie.bestrelases.home.movies.di.MoviesFragmentBuilderModule
-import com.movie.bestrelases.home.movies.di.MoviesModule
 import com.movie.bestrelases.home.movies.ui.activity.HomeActivity
 import com.movie.bestrelases.splash.ui.SplashActivity
 import dagger.Module

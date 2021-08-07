@@ -3,14 +3,14 @@ package com.movie.bestrelases.home.movies.ui.adapter
 import android.view.View
 import coil.load
 import coil.transform.RoundedCornersTransformation
+import com.example.core.movies.data.remote.model.Results
+import com.example.core.movies.presentation.uimodels.MovieUIModel
+import com.example.core.movies.presentation.uimodels.mapper.mapToUIModel
+import com.example.core.util.data.APIConst.Companion.POSTER_BASE_URL
 import com.movie.bestrelases.R
 import com.movie.bestrelases.base.ui.BaseViewHolder
 import com.movie.bestrelases.databinding.ItemMovieBinding
-import com.movie.bestrelases.home.movies.data.remote.model.Results
-import com.movie.bestrelases.home.movies.presentation.uimodels.MovieUIModel
-import com.movie.bestrelases.home.movies.presentation.uimodels.mapper.mapToUIModel
 import com.movie.bestrelases.util.FirebaseAnalyticsUtil
-import com.movie.bestrelases.util.data.APIConst.Companion.POSTER_BASE_URL
 
 
 class MovieItemVH(

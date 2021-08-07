@@ -1,6 +1,7 @@
 package com.movie.bestrelases.di
 
 import android.app.Application
+import com.example.core.base.di.AppModule
 import com.movie.bestrelases.app.BestReleasesApplication
 import dagger.BindsInstance
 import dagger.Component

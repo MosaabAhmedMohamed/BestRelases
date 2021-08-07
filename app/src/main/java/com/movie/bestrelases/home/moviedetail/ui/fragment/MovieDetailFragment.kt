@@ -8,6 +8,11 @@ import androidx.lifecycle.ViewModelProvider
 import coil.load
 import coil.size.Scale
 import coil.transform.RoundedCornersTransformation
+import com.example.core.base.di.ViewModelFactory
+import com.example.core.moviedetail.presentation.viewmodel.MovieDetailViewModel
+import com.example.core.moviedetail.presentation.viewstate.MovieDetailViewState
+import com.example.core.movies.presentation.uimodels.MovieUIModel
+import com.example.core.util.data.APIConst.Companion.POSTER_BASE_URL
 import com.movie.bestrelases.R
 import com.movie.bestrelases.base.ui.BaseFragment
 import com.movie.bestrelases.base.ui.ext.gone
@@ -15,11 +20,6 @@ import com.movie.bestrelases.base.ui.ext.showLoading
 import com.movie.bestrelases.base.ui.ext.showRetryDialog
 import com.movie.bestrelases.base.ui.ext.visible
 import com.movie.bestrelases.databinding.FragmentMovieDetailBinding
-import com.movie.bestrelases.di.ViewModelFactory
-import com.movie.bestrelases.home.moviedetail.presentation.viewmodel.MovieDetailViewModel
-import com.movie.bestrelases.home.moviedetail.presentation.viewstate.MovieDetailViewState
-import com.movie.bestrelases.home.movies.presentation.uimodels.MovieUIModel
-import com.movie.bestrelases.util.data.APIConst.Companion.POSTER_BASE_URL
 import com.movie.bestrelases.util.ui.NavigationConst.Companion.ID_KEY
 import com.movie.bestrelases.util.ui.NavigationConst.Companion.MODEL_KEY
 import javax.inject.Inject
